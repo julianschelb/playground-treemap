@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Assignment 10 [Data Visualization: Advanced Topics]</title>
+
+        <!-- Dependencies to jQuery and D3.js -->
+        <script src="https://ajax.googleapis.com/ajax/libs/d3js/5.15.0/d3.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+        <!-- Custom script for assignment solution -->
+        <script src="./main.js"></script>
+
+        <style>
+        .tooltip {
+            background-color:white;
+            border: none;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            border-radius: 5px;
+            /*min-width: 250px;*/
+            padding: 15px;
+            text-align: left;
+            color: #343a40;
+            position:absolute; 
+        } 
+
+        .tooltip_header {
+            text-align: center;
+            font-weight:bold;
+        }
+
+        .tooltip_attr {
+            float: left; 
+            width: 50%;
+        }
+
+        .tooltip_value {
+            float: left;
+            text-align: right; 
+            width: 50%;
+        }
+        </style>
+    </head>
+
+    <body>
+
+        <h2> Flare Dataset as Treemap</h2>
+        <p>Assumptions:  </p>
+        <ul>
+            <li>Hierarchy level = depth = number of edges to the root node</li>
+            <li>Number of siblings = number of children nodes besides the currently selected</li>
+          </ul>
+        <div id="plot_canvas_treemap" class="container">
+        
+            <svg id ='canvas' width='1200' height='1200'></svg>
+        
+        </div>
+
+    </body>
+</html>
